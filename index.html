@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Authentication</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sign In Form -->
+        <div class="form-box login-form active" id="loginForm">
+            <h2>Sign In</h2>
+            <form id="signInForm">
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="Email">
+                    <small class="error-message">Valid email is required</small>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password">
+                    <small class="error-message">Password is required</small>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="toggle-link">
+                Don't have an account? <a href="#" onclick="switchForm('register')">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="form-box register-form" id="registerForm">
+            <h2>Create Account</h2>
+            <form id="signUpForm">
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="regName" placeholder="Full Name">
+                    <small class="error-message">Name is required</small>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="regEmail" placeholder="Email">
+                    <small class="error-message">Valid email is required</small>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="regPassword" placeholder="Password">
+                    <small class="error-message">Password must be 6+ characters</small>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <div class="toggle-link">
+                Already have an account? <a href="#" onclick="switchForm('login')">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
